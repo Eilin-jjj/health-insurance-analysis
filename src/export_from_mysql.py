@@ -51,7 +51,7 @@ WHERE data_source = 'train'
 # 步骤3：执行训练数据查询并导出CSV
 train_df = pd.read_sql(train_query, engine)
 train_df.to_csv('train_for_modeling.csv', index=False, encoding='utf-8')
-print(f"✅ 训练数据导出完成: {len(train_df)} 条记录")
+print(f"训练数据导出完成: {len(train_df)} 条记录")
 
 # ============================================================
 # 第三部分：导出测试数据
@@ -81,7 +81,7 @@ WHERE data_source = 'test'
 # 步骤5：执行测试数据查询并导出CSV
 test_df = pd.read_sql(test_query, engine)
 test_df.to_csv('test_for_modeling.csv', index=False, encoding='utf-8')
-print(f"✅ 测试数据导出完成: {len(test_df)} 条记录")
+print(f"测试数据导出完成: {len(test_df)} 条记录")
 
 # ============================================================
 # 第四部分：数据预览与验证
